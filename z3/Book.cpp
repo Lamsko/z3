@@ -12,6 +12,26 @@ Book::Book(string t, string a, int ls) : tytul(t), autor(a), liczbaStron(ls)
 	ileKonstruktorParametryczny++;
 }
 
+Book::Book(const Book & b)
+{
+	ileKonstruktorKopiujacy++;
+}
+
+Book::Book(Book && b)
+{
+	ileKonstruktorPrzenoszacy++;
+}
+
+Book & Book::operator=(const Book &)
+{
+	ileOperatorKopiujacy++;
+}
+
+Book & Book::operator=(Book &&)
+{
+	ileOperatorPrzenoszacy++;
+}
+
 Book::~Book()
 {
 }
