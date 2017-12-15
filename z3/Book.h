@@ -1,8 +1,21 @@
 #pragma once
+#include <string>
+
+using namespace std;
+
 class Book
 {
 public:
-	Book();
+	Book(string t, string a, int ls);
 	~Book();
+private:
+	string tytul;
+	string autor;
+	int liczbaStron;
+	static int ileKonstruktorParametryczny;
+	static int ileKonstruktorKopiujacy;
+	static int ileKonstruktorPrzenoszacy;
+	static int ileOperatorKopiujacy;
+	static int ileOperatorPrzenoszacy;
 };
 
