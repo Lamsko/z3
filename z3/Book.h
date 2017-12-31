@@ -6,6 +6,7 @@ using namespace std;
 class Book
 {
 public:
+	Book();
 	Book(string t, string a, int ls);
 	Book(const Book& b);
 	Book(Book&& b);
@@ -16,15 +17,14 @@ public:
 	const string getAutor();
 	int getLiczbaStron();
 	const void toString();
+	static int ileKonstruktorKopiujacy;
+	static int ileKonstruktorParametryczny;
+	static int ileKonstruktorPrzenoszacy;
 
 private:
 	string tytul;
 	string autor;
 	int liczbaStron;
-	static int ileKonstruktorParametryczny;
-	static int ileKonstruktorKopiujacy;
-	static int ileKonstruktorPrzenoszacy;
-	static int ileOperatorKopiujacy;
-	static int ileOperatorPrzenoszacy;
+
 };
 

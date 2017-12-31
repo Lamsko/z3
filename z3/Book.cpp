@@ -9,6 +9,10 @@ int Book::ileKonstruktorParametryczny = 0;
 int Book::ileKonstruktorPrzenoszacy = 0;
 
 
+Book::Book() : tytul(""), autor(""), liczbaStron(0)
+{
+}
+
 Book::Book(string t, string a, int ls) : tytul(t), autor(a), liczbaStron(ls)
 {
 	ileKonstruktorParametryczny++;
