@@ -12,6 +12,11 @@ public:
 	Book& operator=(const Book&);
 	Book& operator=(Book&&);
 	~Book();
+	const string getTytul();
+	const string getAutor();
+	int getLiczbaStron();
+	const void toString();
+
 private:
 	string tytul;
 	string autor;

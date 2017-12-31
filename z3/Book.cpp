@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Book.h"
+#include <iostream>
+
+using namespace std;
 
 int Book::ileKonstruktorKopiujacy = 0;
 int Book::ileKonstruktorParametryczny = 0;
@@ -62,4 +65,24 @@ Book & Book::operator=(Book && b)
 
 Book::~Book()
 {
+}
+
+const string Book::getTytul()
+{
+	return tytul;
+}
+
+const string Book::getAutor()
+{
+	return autor;
+}
+
+int Book::getLiczbaStron()
+{
+	return liczbaStron;
+}
+
+const void Book::toString()
+{
+	cout << "Tytul: " << tytul << " Autor: " << autor << " Liczba stron: " << liczbaStron << endl;
 }
